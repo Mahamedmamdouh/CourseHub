@@ -1,0 +1,159 @@
+
+@import "tailwindcss";
+
+body {
+  margin: 0;
+}
+
+:root {
+  /* التدرجات اللونية */
+  --border-gradient: linear-gradient(
+    90deg,
+    #ff0000 0%,
+    #00d5ff 30%,
+    #00ff22 60%,
+    #dd00ff 100%
+  );
+
+  --design-income-gradient: linear-gradient(
+    90deg,
+    #575757 0%,
+    #cecece 45%,
+    #666666 97%
+  );
+
+  --gold-gradient: linear-gradient(90deg, #bd8800, #ffd100, #9c6b00);
+
+  /* تدرج اللون الأسود/الرمادي من فيجما */
+  --black-gradient: linear-gradient(0deg, #a5a5a5 0%, #3f3f3f 100%);
+
+  /* الأصول (Assets) */
+  --gold-texture: url('./assets/images/common/goldTexture.webp');
+}
+
+/* --- كلاسات النصوص (Typography) --- */
+
+.gradient-border {
+
+  background: var(--border-gradient);
+
+}
+.gradient-border-underline {
+  position: relative;
+}
+
+.gradient-border-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 1px;
+  width: 50%;
+  transform: translateX(50%);
+  background: var(--border-gradient);
+}
+
+.gradient-text-black {
+  background: var(--black-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.gradient-text-hero {
+  background: var(--border-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.gradient-text {
+  background-image: var(--gold-texture), var(--gold-gradient);
+  background-blend-mode: overlay;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: cover;
+  background-position: center;
+  filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.1));
+  display: inline-block;
+}
+
+.design-income-text {
+  background: var(--design-income-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+/* --- كلاسات الأزرار والحدود --- */
+
+.gold-button {
+  background: var(--gold-gradient);
+  box-shadow: 0 10px 30px rgba(189, 136, 0, 0.3);
+  background-image: var(--gold-texture);
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+/* كارد البوردر الذهبي بتقنية الـ Mask */
+.gold-border-card {
+  position: relative;
+  background: #fff; /* لون خلفية الكارد من الداخل */
+  border-radius: 70px;
+}
+
+
+.gold-border-card::before {
+  content: "";
+  position: absolute;
+  inset: -3px; /* يتحكم في سمك البوردر */
+  border-radius: 75px; /* يجب أن يكون أكبر قليلاً من الـ border-radius الأصلي */
+  padding: 5px; /* نفس قيمة الـ inset */
+  
+  /* الخلفية الذهبية مع التكستشر */
+  background: var(--gold-texture), var(--gold-gradient);
+  background-blend-mode: overlay;
+  background-size: cover;
+  
+  /* تقنية الـ Mask لقص الخلفية وجعلها تظهر كإطار فقط */
+  -webkit-mask: 
+     linear-gradient(#fff 0 0) content-box, 
+     linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  pointer-events: none;
+}
+.gold-border-card.fix-radius::before {
+  border-radius: 0 0 60px 60px;
+}
+   
+   
+
+
+
+/* --- تأثيرات الأنيميشن --- */
+
+@layer utilities {
+  @keyframes ping-out {
+    0% {
+      transform: scale(1);
+      opacity: 0.8;
+    }
+    100% {
+      transform: scale(1.6);
+      opacity: 0;
+    }
+  }
+
+  .animate-ping-out {
+    animation: ping-out 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+}
