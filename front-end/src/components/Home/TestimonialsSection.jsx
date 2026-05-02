@@ -1,6 +1,6 @@
 import React from 'react'
 
-import student4 from "../../assets/images/home/student4.webp"
+import student4 from "../../assets/images/home/Student4.webp"
 import student5 from "../../assets/images/home/student5.webp"
 import student6 from "../../assets/images/home/student6.webp"
 import student7 from "../../assets/images/home/student7.webp"
