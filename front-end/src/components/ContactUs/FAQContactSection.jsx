@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import icon from "../../assets/images/course/Icon5.svg";
-import LeaderProfile from "../../assets/images/contact/profile.webp";
+import LeaderProfile from "../../assets/images/contact/Profile.webpgit";
 
 const faqs = [
   {
