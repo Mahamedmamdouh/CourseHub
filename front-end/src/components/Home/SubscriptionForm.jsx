@@ -14,7 +14,7 @@ export default function SubscriptionForm() {
       </button>   */}
     
 
-      <GoldButton>
+      <GoldButton className="text-white">
         Lifetime Subscription
         
       </GoldButton>

@@ -4,9 +4,12 @@ import { Link } from "react-router-dom";
 
 
 
+
 export default function Navbar() {
   return (
-    <nav className="w-full h-19.25 bg-black text-white border-b border-red-600">
+    <nav className={`w-full h-19.25 bg-black text-white gradient-bottom-border`} 
+  >
+    
       <div className="max-w-full mx-auto px-20 py-3 h-full flex items-center justify-between">
         
         {/* Logo */}

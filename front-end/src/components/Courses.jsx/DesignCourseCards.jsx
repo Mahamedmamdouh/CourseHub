@@ -83,7 +83,7 @@ const DesignCourseCards = () => {
           {/* Gold Pill Text */}
 
 
-          <GoldButton className='px-12 py-4 z-10 mt-10 '>
+          <GoldButton className='text-white px-12 py-4 z-10 mt-10 '>
              Don’t just watch others
           </GoldButton>
 

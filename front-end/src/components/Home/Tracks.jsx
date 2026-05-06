@@ -89,13 +89,6 @@ export default function Tracks() {
     <span className="font-bold text-black"> professional asset </span> 
     that grows with you for a lifetime..One decision, continuous growth, and the power to always keep you at the forefront of the elite."
   </p>
-  
-
-  
-
- 
-    
-
 
 </div>
     </>

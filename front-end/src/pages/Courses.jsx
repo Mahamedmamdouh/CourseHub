@@ -8,6 +8,7 @@ import DesignCourseCards from '../components/Courses.jsx/DesignCourseCards';
 import CertificationSection from '../components/Home/CertificationSection';
 import MentorSection from '../components/Home/MentorSection';
 import FAQSection from '../components/Courses.jsx/FAQSection';
+import OurCourse from '../components/Courses.jsx/OurCourse';
 
 export default function Courses() {
   return (
@@ -16,7 +17,7 @@ export default function Courses() {
    <FeatureSection/>
    <InstructorProfile/>
    <FreeLectureSection/>
-   
+   <OurCourse/>
    <DesignCourseCards/>
    <CertificationSection />
    <MentorSection/>

@@ -1,27 +1,27 @@
 import React, { useState } from 'react';
 import icon from "../../assets/images/course/Icon5.svg";
-import LeaderProfile from "../../assets/images/course/Profile.webp";
+import LeaderProfile from "../../assets/images/contact/profile.webp";
 
 const faqs = [
   {
-    question: "How long does it take to become a designer capable of selling my services?",
+    question: "I’m an employee/student with limited time. Does the course require a fixed schedule?",
     answer:
-      "Once you complete the program and apply the practical projects with me, you'll be able to execute designs that clients actually request. The course is designed to take you to the 'work-ready' stage in the shortest possible time, because we focus on application, not just theoretical explanation."
+      "We value your time. The course is designed to be fully flexible. The lessons are high-quality recorded sessions available to you for life, allowing you to learn anytime and from anywhere that suits you, while still maintaining direct support when needed."
   },
   {
-    question: "Will I learn the new AI technologies in Photoshop?",
+    question: "Will it help me get more clients and expand my services, or is it only about design?",
     answer:
-      "Absolutely! Photoshop today is strongly powered by AI. In this course, I'll show you how to use these technologies to complete work that used to take hours in just minutes."
+      "This is the core of ANS Academy. We don’t just teach you how to design — we teach you how to sell. The course includes complete modules on Freelancing Business: how to build an attractive portfolio, how to negotiate with clients, and how to price your services in a way that reflects your true market value."
   },
   {
-    question: "What's the difference between what I'll learn in Photoshop and ready-made design apps like Canva?",
+    question: "Does the course support AI (Artificial Intelligence) tools in design?",
     answer:
-      "Apps like Canva are for hobbyists who rely on repeated ready-made templates. Photoshop is for professionals who create the templates themselves! VIP clients in the Gulf look for a designer who creates a unique identity that no one else has."
+      "Keeping up with the future is part of our approach. You’ll learn how to leverage the latest AI tools to boost your productivity and improve the quality of your designs, becoming a modern designer who stays steps ahead of competitors."
   },
   {
-    question: "Where will I get high-quality images and resources for my designs?",
+    question: "Does the curriculum focus on visual identities or social media designs?",
     answer:
-      "I'll show you the best free and paid sources used by top designers to get professional assets without wasting time searching."
+      "The curriculum is comprehensive and built around market demand. We focus intensively on social media designs (as they are the most requested), in addition to strategic visual identity development, so you graduate with integrated skills that make you the first choice for business owners."
   },
   {
     question: "What if a new Photoshop update is released after I purchase the course?",
@@ -45,28 +45,31 @@ const faqs = [
   }
 ];
 
-const FAQSection = () => {
+const FAQContactSection = () => {
   const [openIndex, setOpenIndex] = useState(0);
 
   return (
-<>
-    <div className="bg-white py-12 md:py-20 text-center">
+
+      <>
+
+      <div className="bg-white py-12 md:py-20 text-center">
         <h2 className="text-5xl md:text-[85px] font-bold leading-tight gradient-text tracking-tighter">
           Your question
         </h2>
       </div>
     <section className="bg-black text-white py-20 px-6 md:px-16 font-lexend overflow-hidden relative min-h-[900px]">
+      
 
       {/* Right side image container */}
       <div className="absolute top-0 right-0 h-full w-[70%] z-0 pointer-events-none">
 
         {/* icon */}
-        <div className="absolute top-2 right-12 w-72 md:w-100">
+        <div className="absolute top-15 right-12 w-72 md:w-75">
           <img src={icon} alt="icon" className="w-full h-auto" />
         </div>
 
         {/* Instructor Image (MAIN FIX HERE) */}
-      <div className="absolute bottom-0 top-25 right-5" style={{ width: '750px' }}>
+      <div className="absolute bottom-0 top-25 right-35" style={{ width: '750px' }}>
   <img
     src={LeaderProfile}
     alt="Instructor"
@@ -131,4 +134,4 @@ const FAQSection = () => {
   );
 };
 
-export default FAQSection;
+export default FAQContactSection;

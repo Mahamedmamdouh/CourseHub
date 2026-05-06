@@ -73,7 +73,7 @@ const CourseHero = () => {
       {/* 1. Headline */}
       <div className="relative mb-4">
         <GoldButton>
-          <h1 className="text-5xl font-semibold">
+          <h1 className="text-5xl text-white font-semibold">
             Start Your Transformation Journey Here
           </h1>
         </GoldButton>

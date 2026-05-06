@@ -3,7 +3,7 @@ import Adobe from "../../assets/images/home/Adobe.webp";
 
 export default function Hero() {
   return (
-    <div className="p-px rounded-b-[120px] gradient-border">
+    <div className="p-px -mt-[1px] rounded-b-[120px] gradient-border">
       <section className="relative w-full min-h-screen flex items-center overflow-hidden rounded-b-[119px] bg-white">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">

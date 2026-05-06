@@ -26,6 +26,8 @@ body {
 
   /* تدرج اللون الأسود/الرمادي من فيجما */
   --black-gradient: linear-gradient(0deg, #a5a5a5 0%, #3f3f3f 100%);
+  --black-gradient-v2: linear-gradient(135deg, #000000 0%, #666666 100%);
+
 
   /* الأصول (Assets) */
   --gold-texture: url('./assets/images/common/goldTexture.webp');
@@ -52,13 +54,34 @@ body {
   transform: translateX(50%);
   background: var(--border-gradient);
 }
+.gradient-bottom-border {
+  position: relative;
+}
 
-.gradient-text-black {
+.gradient-bottom-border::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  
+  background: var(--border-gradient);
+}
+
+.gradient-text-black{
   background: var(--black-gradient);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
+}
+.gradient-text-black-v2{
+  background: var(--black-gradient-v2);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display:block;
 }
 
 .gradient-text-hero {
@@ -99,7 +122,7 @@ body {
   background-image: var(--gold-texture);
   background-size: cover;
   background-position: center;
-  color: white;
+
   text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
 }
 
